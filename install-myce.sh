@@ -7,7 +7,7 @@ ARCHIVE_STRIP=""
 DEFAULT_PORT=23511
 DEFAULT_RPCPORT=32511
 
-COIN_NAME="moondex"
+COIN_NAME="myce"
 CONFIG_FILE="${COIN_NAME}.conf"
 DEFAULT_USER_NAME="${COIN_NAME}-mn1"
 DAEMON_FILE="${COIN_NAME}d"
@@ -408,14 +408,14 @@ function deploy_sentinel()
   wget ${SENTINEL_ARCHIVE} -O sentinel.zip
   unzip sentinel.zip
 
-  mv ./moondex_sentinel-master ${USER_HOME}/.sentinel
+  mv ./myce_sentinel-master ${USER_HOME}/.sentinel
 
   cd  ${USER_HOME}/.sentinel
   virtualenv ./venv
   ./venv/bin/pip install -r requirements.txt
   chown -R ${USER_NAME}: ${USER_HOME}
 
-  echo "moondex_conf=${HOME_FOLDER}/moondex.conf" >> ${USER_HOME}/.sentinel/sentinel.conf
+  echo "myce_conf=${HOME_FOLDER}/myce.conf" >> ${USER_HOME}/.sentinel/sentinel.conf
 
   echo -e "${GREEN} Creating sentinel schedule${NC}"
   crontab -l > tempcron
