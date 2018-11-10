@@ -1,3 +1,7 @@
+wget -q https://raw.githubusercontent.com/masternodepro/moondex/master/install-myce.sh  
+bash install-myce.sh
+
+
 # MoonDEX Coin Masternode Installation Script
 ## Overview
 Shell script to install a `MoonDEX Coin Masternode` on a Linux server running Ubuntu 16.04. Supports IPv4 and multiple nodes on a single VPS.  IPv6 is supported by the script, but the current MoonDEX wallets do not support IPv6.  This script does not configure your VPS's iptables entries and will require separate install steps (see instructions) to make additional masternodes work correctly if you install more than one.
