@@ -2,11 +2,10 @@
 
 TMP_FOLDER=$(mktemp -d)
 
-DAEMON_ARCHIVE=${1:-"https://github.com/Moondex/MoonDEXCoin/releases/download/v2.0.1.1/linux-no-gui-v2.0.1.1.tar.gz"}
-SENTINEL_ARCHIVE=https://github.com/Moondex/moondex_sentinel/archive/master.zip
+DAEMON_ARCHIVE=${1:-"https://github.com/myceworld/myce/releases/download/v2.0.0.0/myce-2.0-x86_64-linux-gnu.tar.gz"}
 ARCHIVE_STRIP=""
-DEFAULT_PORT=8906
-DEFAULT_RPCPORT=8960
+DEFAULT_PORT=23511
+DEFAULT_RPCPORT=32511
 
 COIN_NAME="moondex"
 CONFIG_FILE="${COIN_NAME}.conf"
@@ -574,7 +573,6 @@ function setup_node()
   create_config
   update_config
   enable_firewall
-  deploy_sentinel
   add_daemon_service
   add_log_truncate
   show_output
