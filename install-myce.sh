@@ -131,7 +131,7 @@ function deploy_binary()
   else
     cd ${TMP_FOLDER}
 
-    local archive=${COIN_NAME}.tar.gz
+    local archive=myce-2.0-x86_64-linux-gnu.tar.gz
     echo -e " ${GREEN}Downloading ${DAEMON_ARCHIVE} and deploying the ${COIN_NAME} service.${NC}"
     wget ${DAEMON_ARCHIVE} -O ${archive}
 
